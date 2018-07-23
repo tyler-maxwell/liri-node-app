@@ -15,3 +15,7 @@ node liri.js spotify-this-song [song title of user choice]
 node liri.js movie-this [movie title of user choice]
 
 node liri.js do-what-it-says
+
+## Github link
+
+https://github.com/tyler-maxwell/liri-node-app
