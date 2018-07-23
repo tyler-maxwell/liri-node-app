@@ -1,6 +1,6 @@
 // Require statements
-var keys = require("./keys.js");
 require("dotenv").config();
+var keys = require("./keys.js");
 var Twitter = require('twitter');
 // var Spotify = require('node-spotify-api');
 var request = require('request');
@@ -9,17 +9,22 @@ var request = require('request');
 // var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
 
-
+// Get node arguments
 var nodeArgs = process.argv;
 nodeArgs.splice(0,2);
 var command = nodeArgs[0];
 
-
-
 // Twitter
 if (command === "my-tweets") {
-
-} 
+    var params = {screen_name: 'TylerMa92237717'};
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+        if (!error) {
+            tweets.forEach(element => {
+                console.log(element.text);
+            });
+        }
+    });
+}
 // Spotify
 else if (command === "spotify-this-song") {
 
