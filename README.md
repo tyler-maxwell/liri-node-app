@@ -18,4 +18,4 @@ node liri.js do-what-it-says
 
 ## Github link
 
-https://github.com/tyler-maxwell/liri-node-app
+[GitHub}(https://github.com/tyler-maxwell/liri-node-app)
